@@ -1,0 +1,161 @@
+article {
+  margin-bottom: 4rem;
+  width: 100%;
+  ul,
+  ol {
+    margin-top: .7rem;
+    margin-bottom: 0;
+    p {
+      margin-top: .7rem;
+      margin-bottom: 0;
+    }
+  }
+}
+header > *,
+main > *,
+footer > *,
+%column-width {
+  max-width: 36rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+header {
+  @extend %clearfix;
+  // padding-top: 10vw;
+  min-height: 5vmin;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  // Fix me.
+  &::after {
+    content:'';
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: 4rem;// 12rem;
+    width: 90%;
+
+    height: 40vh;// calc(80% - 1rem);
+    min-height: 20rem;
+    background-color: #FFF;
+    margin-left: 5%;
+    // margin-right: auto;
+    // background-color: red;
+  }
+  h1 {
+    max-width: 84rem;
+    margin-bottom: 2rem;
+    & + .author,
+    & + p {
+      margin-top: 2vmin;
+      margin-bottom: 4vmin;
+    }
+  }
+  .author,
+  time {
+    display: block;
+    text-align: center;
+    & + h1 {
+      margin-top: .75rem;
+    }
+  }
+  &.background-image {
+    min-height: 40vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:
+      linear-gradient(rgba($gray-10, .2), rgba($gray-10, .6)),
+      url('tumblr_n3tv5gOSNc1qm3r26o1_1280.jpg');
+    h1 {
+      color: $primary-1;
+    }
+  }
+
+}
+main {
+  z-index: 1;
+  position: relative;
+  @extend %clearfix;
+  time {
+    display: block;
+    margin-bottom: 0;
+    @extend %column-width;
+    & + h3 {
+      margin-top: 1vh;
+    }
+  }
+}
+@media(max-width: $width-s) {
+  article {
+    // margin-left: 5%;
+    // margin-left: 5%;
+    header > *,
+    main > *,
+    footer > * {
+      // margin-left: 5%;
+      // margin-right: 5%;
+    }
+  }
+  header > *,
+  main > *,
+  %column-width {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  header {
+    min-height: 10vh;
+  }
+}
+@media (min-width: $width-s) {
+  header > *,
+  main > *,
+  footer > *,
+  %column-width {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  article {
+    h1 {
+      max-width: 84rem;
+      // margin-bottom: 4rem;
+    }
+    header {
+      min-height: 18vmin;
+      &::after {
+        top: 6rem;
+        height: 30vh;
+        min-height: 14rem;
+      }
+    }
+  }
+}
+// @media (min-width: $width-m) { //60em
+//   header > *,
+//   main > *,
+//   footer > *,
+//   %column-width {
+//     max-width: 42rem;
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
+@media (min-width: $width-m) { //60em
+  header > *,
+  main > *,
+  footer > *,
+  %column-width {
+    max-width: 42rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  article header {
+    min-height: 16vmin;
+    margin-bottom: 2.8rem;
+    &::after {
+      top: 8rem;
+      min-height: 20rem;
+    }
+  }
+}
+// min-height: 18vmin;

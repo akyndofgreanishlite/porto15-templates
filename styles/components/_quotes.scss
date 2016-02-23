@@ -1,0 +1,27 @@
+q p {
+  // @include grid-columns(1,1,0);
+  // @extend %clearfix;
+  
+  &::before,
+  &::after {
+    content: '';
+  }
+
+  &::before {
+    // content:'“';
+  }
+  &::after {
+    // content:'”';
+  }
+}
+q,
+blockquote {
+  font-family: $serif-headline;
+  font-style: italic;
+}
+@media (min-width: 60em) {
+  q {
+    width: 90%;
+    // padding-left: 0;
+  }
+}

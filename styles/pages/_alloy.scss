@@ -1,0 +1,36 @@
+.alloy {
+  header {
+    // height: 80vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // align-content: center;
+    // flex-direction: column;
+    // & > * {
+    //   flex: 0 1 auto;
+    // }
+    // &::after {
+    //   background:
+    //     linear-gradient( to left top, rgba($gray-4,.4), rgba($gray-4,.4)),
+    //     url(http://placehold.it/1280x800);
+    //   background-size: cover;
+    //   background-position: center;
+    // }
+  }
+  footer {
+    @extend %clearfix;
+    margin: 4rem 0 -2rem;
+    p {
+      color: #8e8d8c;
+    }
+    ul + h4 {
+      margin-top: 2rem;
+    }
+  }
+}
+.name {
+  color: $primary-1;
+  & + h1 {
+    margin-top: 2.5rem;
+  }
+}

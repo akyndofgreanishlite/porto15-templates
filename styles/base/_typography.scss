@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'Marr Sans';
+  src: url(fonts/MarrSans-Regular-Web.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Marr Sans';
+  src: url(fonts/MarrSans-RegularItalic-Web.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Marr Sans';
+  src: url(fonts/MarrSans-Medium-Web.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Marr Sans';
+  src: url(fonts/MarrSans-Semibold-Web.woff);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Marr Sans';
+  src: url(fonts/MarrSans-Bold-Web.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Marr Sans';
+  src: url(fonts/MarrSans-BoldItalic-Web.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Marr Sans Condensed';
+  src: url(fonts/MarrSansCondensed-Regular-Reduced.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Marr Sans Condensed';
+  src: url(fonts/MarrSansCondensed-RegularItalic-Reduced.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Marr Sans Condensed';
+  src: url(fonts/MarrSansCondensed-Medium-Reduced.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Marr Sans Condensed';
+  src: url(fonts/MarrSansCondensed-Semibold-Reduced.woff);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Marr Sans Condensed';
+  src: url(fonts/MarrSansCondensed-Bold-Reduced.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Marr Sans Condensed';
+  src: url(fonts/MarrSansCondensed-BoldItalic-Reduced.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lyon Text';
+  src: url(fonts/LyonText-Regular-Web.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Lyon Text';
+  src: url(fonts/LyonText-RegularItalic-Web.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lyon Text';
+  src: url(fonts/LyonText-Bold-Web.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Lyon Text';
+  src: url(fonts/LyonText-BoldItalic-Web.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SSCommunity';
+  src: url(fonts/ss-community.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SSSocial';
+  src: url(fonts/ss-social-regular.woff);
+  font-weight: 400;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: $serif-body;
+  font-size: 111.25%;
+  line-height: 1.6;
+  color: $gray-3;
+  background-color: $gray-10;
+  font-kerning: normal;
+  // padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  // Kill margins here, and add them to the section level?.
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+a {
+  color: $primary-1;
+  &:hover {
+    color: $primary-2;
+  }
+}
+p a:hover {
+  z-index: 10000;
+  // box-shadow: 0 0 0 1rem white;
+}
+h1,
+h2,
+h3,
+h4,
+time {
+  font-family: $sans;
+}
+h1,
+h2,
+h3 {
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+%h1 {
+  font-weight: 600;
+  font-size: 2.667rem; //1.714rem;
+  line-height: 1.25;
+  letter-spacing: -.014rem;
+  color: $gray-1;
+  text-align: center;
+
+}
+h2,
+%h2 {
+  font-weight: 400;
+  // font-size: 1.333rem;
+  font-size: 1.714rem;
+  // line-height: 1.4;
+  line-height: 1.2;
+  letter-spacing: -.007rem;
+  color: $gray-1;
+  margin-top: 6vmin;
+  margin-bottom: 1vmin;
+  & + h3 {
+    margin-top: 2vmin;
+  }
+}
+h3,
+%h3 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+  color: $gray-2;
+}
+h4,
+%h4,
+time {
+  font-weight: 600;
+  font-size: 0.762rem;
+  line-height: 1.8;
+  text-transform: uppercase;
+  letter-spacing: .125rem;
+  margin-top: 4vmin;
+  margin-bottom: .25vmin;
+}
+h5,
+%h5 {
+  font-size: 1vm;
+  font-weight: 600;
+  color: $gray-3;
+}
+p {
+  margin-top: 2.1vh;// .7rem;
+  margin-bottom: 0;
+  color: $gray-4;
+  &:last-of-type {
+    margin-bottom: .7rem;
+  }
+  &.lead {
+    // @extend %h2;
+    font-family: $sans;
+    font-size: 1.125rem;
+    line-height: 1.48;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    // font-weight: 400;
+    color: $gray-3
+  }
+}
+q p {
+  @extend %h2;
+}
+.name {
+  text-align: center;
+  margin-bottom: 0;
+  // margin-top: 2vmin;
+}
+.ss-icon {
+  font-family: "SSCommunity";
+  // vertical-align: -.025rem;
+  // line-height: 1.8;
+}
+.ss-previous,
+.ss-next {
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+@media(min-width: $width-s) {
+  body {
+    // font-size: 111.25%; // 18
+  }
+  h1 {
+    font-size: 3.375rem;
+    padding: 0 2rem;
+  }
+  // h2,
+  q p {
+    // font-size: 1.714rem;
+    line-height: 1.2;
+  }
+  h3,
+  p.lead {
+    font-size: 1.333rem;
+    line-height: 1.6;
+  }
+  h4,
+  code p,
+  time,
+  .name,
+  .button {
+    font-size: .825rem;
+  }
+}
+// TODO: Standardize this width
+@media(min-width: $width-m) { // 72em?
+  body {
+    font-size: 131.25%; // 132? 21
+  }
+  h1 {
+    font-size: 5.25rem;
+    // line-height: 1;
+  }
+  h2 {
+    font-size: 2.667rem;
+    line-height: 1.2;
+  }
+  h3,
+  p.lead {
+    font-size: 1.714rem;
+    line-height: 1.48;
+  }
+  h3 {
+    font-weight: 600;
+  }
+  h4,
+  code p,
+  time,
+  .button,
+  .name {
+    font-size: .95rem;
+  }
+}
+// TODO: Standardize this width
+@media(min-width: $width-xl) { // 96em 72em?
+  body {
+    font-size: 150%; // 24
+  }
+}

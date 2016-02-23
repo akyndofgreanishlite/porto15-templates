@@ -1,0 +1,34 @@
+footer {
+  text-align: center;
+  ul {
+    margin: .7rem inherit;;
+    padding-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  ul.social-links {
+    margin-top: .35rem;
+    li {
+      list-style-type: none;
+      display: inline;
+      // padding: .5rem;
+      a {
+        padding: .5rem;
+      }
+      .ss-icon {
+        font-family: "SSSocial", "SS Social";
+      }
+    }
+  }
+  nav.primary {
+    opacity: .1;
+    margin-top: 4rem;
+    &:hover {
+      opacity: 1;
+      transform: all cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    & > * {
+      transform: all cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+}

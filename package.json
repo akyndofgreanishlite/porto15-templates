@@ -1,0 +1,29 @@
+{
+  "name": "DonkeySlips",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Jameson Tyler <jtyler@localytics.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/localytics/design-manual.git"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "contributors": [
+    {
+      "name": "Charles Mastin",
+      "email": "cmastin@localytics.com"
+    }
+  ],
+  "devDependencies": {
+    "gulp": "",
+    "gulp-duration": "",
+    "gulp-livereload": "",
+    "gulp-notify": "",
+    "gulp-remove-empty-lines": "",
+    "gulp-sass": "",
+    "gulp-webp": "^2.3.0",
+    "node-static": "^0.7.7"
+  }
+}

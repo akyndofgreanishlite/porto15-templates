@@ -1,0 +1,27 @@
+%clearfix {
+  @include clearfix();
+}
+
+.smallcaps {
+  // text-transform: lowercase;
+  letter-spacing: .05rem;
+  // font-variant: small-caps;
+  -moz-font-feature-settings:"smcp" 1, "c2sc" 1;
+  -ms-font-feature-settings:"smcp" 1, "c2sc" 1;
+  -o-font-feature-settings:"smcp" 1, "c2sc" 1;
+  -webkit-font-feature-settings:"smcp" 1, "c2sc" 1;
+  font-feature-settings:"smcp" 1, "c2sc" 1;
+}
+
+%smallcaps {
+  // font-size: .85rem; // Needs to be scaled down relative to inherited size.
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.numeric,
+%numeric {
+  text-align: right;
+  -webkit-font-feature-settings: 'tnum' 1; /* Chrome 31+, Android 4.4+, Opera 24+ */
+  font-feature-settings: 'tnum' 1; /* IE10+ */
+}

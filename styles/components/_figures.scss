@@ -1,0 +1,236 @@
+figure {
+  // @extend %column-width;
+  // max-width: 42rem;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin: 4.8vmin auto 4.2vmin;
+  height: auto;
+  padding: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start;
+
+  & + figure {
+    margin-top: 6.4vmin;
+  }
+
+  // background-color: $gray-13;
+  // @extend %clearfix;
+  picture {
+    display: block;
+    // @extend %clearfix;
+  }
+  picture {
+    margin-bottom: 6vmin;// .7rem;
+  }
+  figcaption {
+    @extend %column-width;
+    // padding-top: .7rem;
+    // background-color: $gray-10;
+    h5 {
+      margin-bottom: .35rem;
+    }
+  }
+  &.single,
+  &.pair,
+  &.full,
+  &.quote {
+    picture,
+    figcaption {
+      // @extend %clearfix;
+      // float: left;
+      flex: 0 1 100%;
+      align-self: auto;
+      min-width: 0px;
+      min-height: auto;
+    }
+    figcaption {
+      // max-width: 42rem;
+      // margin-left: auto;
+      // margin-right: auto;
+      // float: none;
+      font-family: $sans;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+    h5,
+    p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+  }
+  &.pair {
+    // background-color: $gray-10; Some fun bug here with overflow.
+    max-width: 84rem;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+
+    picture {
+      // flex: 0 1 100%;
+      align-self: auto;
+      min-width: 0px;
+      min-height: auto;
+      // @extend %clearfix;
+    }
+    figcaption {
+      // @include grid-columns(1);
+      // max-width: 36rem;
+      // margin: .7rem auto;
+      // float: none;
+      // clear: both;
+    }
+  }
+  &.full {
+    max-width: 84rem;
+    // @include grid-columns
+    picture {
+      width: 100%;
+    }
+    figcaption {
+
+      // max-width: 95%;
+    }
+  }
+  &.quote,
+  &.quote-full {
+    border-left: .25rem solid $primary-1;
+  }
+  &.quote {
+    q,
+    figcaption {
+      @extend %clearfix;
+      float: left;
+      margin-left: 5%;
+      padding-left: 0;
+    }
+    q {
+      margin-top: 0;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+    q p {
+      @extend %h1;
+      text-align: left;
+      font-weight: 300;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      // text-indent: -1rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      line-height: 1.25;
+    }
+  }
+  &.quote-full {
+    max-width: 84rem;
+  }
+  &.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > * {
+      flex: 1;
+    }
+    picture {
+      max-width: 100%;
+    }
+  }
+}
+picture,
+img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+figcaption {
+  margin-top: 0; //.7rem;
+  h5,
+  p {
+    margin: 0 auto;
+  }
+  p {
+    color: $gray-4;
+  }
+}
+@media(max-width: 35.999em) {
+  figure,
+  figure.pair,
+  figure.full {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      // @include grid-columns(1);
+      // Negative margins on smallscreens, or an article level concern?
+    }
+    figcaption {
+      // @extend %column-width;
+    }
+
+  }
+  figure.quote {
+    q {
+      padding-left: calc(5% - .25rem);
+      padding-right: calc(5% - .25rem);
+      width: calc(100% - .25rem - (2 * (5% - .25rem)));
+    }
+    q p {
+      font-size: 1.333rem;
+      line-height: 1.6;
+    }
+  }
+}
+@media(min-width: $width-s) {
+  figure.pair {
+    picture {
+      flex: 0 1 49%;
+    }
+    figcaption {
+        // margin-top: calc(1.4rem - 2%);
+    }
+  }
+  figure picture {
+    margin-bottom: 3vmin;
+  }
+}
+@media (min-width: 60em) {
+  figure {
+    padding: 0;
+  }
+}
+@media(min-width: $width-m) {
+  figure,
+  figure.single,
+  figure.pair,
+  figure.full {
+    margin-left: auto;
+    margin-right: auto;
+    h5,
+    p {
+      font-size: 1rem;
+      // line-height: 1.6;
+    }
+  }
+  .lead + figure {
+    margin-top: 5.6rem;
+  }
+}
+@media(min-width: 96em) {
+}
+@media(min-width: $width-xl) {
+  figure.single,
+  figure.pair,
+  figure.full {
+    max-width: 112rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Responsive image guys
+// <picture class="spark-responsive-img expand__img spark-responsive-img--loaded"><source srcset="https://images.contentful.com/7zrcoz02zalr/19BbIDJsvWCgqAOAegMo0C/3ea5515db669e07d7e7883e352648842/samsungExpand_2x1_fullBleed_desktop_test.png?w=1500&amp;fm=jpg&amp;q=80 1x, https://images.contentful.com/7zrcoz02zalr/19BbIDJsvWCgqAOAegMo0C/3ea5515db669e07d7e7883e352648842/samsungExpand_2x1_fullBleed_desktop_test.png?w=3000&amp;fm=jpg&amp;q=50 2x" media="(min-width: 1024px)"><source srcset="https://images.contentful.com/7zrcoz02zalr/1zKACm26CE8KmS0EOMQQyi/eccd7a0a01fbf423aa8082f332e5f49b/samsungExpand_3x2_fullBleed_tablet_2x.png?w=1007&amp;fm=jpg&amp;q=80 1x, https://images.contentful.com/7zrcoz02zalr/1zKACm26CE8KmS0EOMQQyi/eccd7a0a01fbf423aa8082f332e5f49b/samsungExpand_3x2_fullBleed_tablet_2x.png?w=2014&amp;fm=jpg&amp;q=50 2x" media="(min-width: 768px)"><source srcset="https://images.contentful.com/7zrcoz02zalr/6725XJwMhia6Qwo0EgocEq/e3cacdaa8ce319e1cf7f666f9e6be94a/samsungExpand_2x3_fullBleed_mobile_2x.png?w=751&amp;fm=jpg&amp;q=80 1x, https://images.contentful.com/7zrcoz02zalr/6725XJwMhia6Qwo0EgocEq/e3cacdaa8ce319e1cf7f666f9e6be94a/samsungExpand_2x3_fullBleed_mobile_2x.png?w=1502&amp;fm=jpg&amp;q=50 2x"><img alt="Samsung S Health - Expand Section Background Image" style="width: 1044px; margin-left: 0px; height: 522px; transform: translate(0px, -87px) scale(1);"></picture>

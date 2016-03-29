@@ -1,0 +1,54 @@
+.button,
+%button {
+  @extend %h4;
+  @extend %clearfix;
+  font-family: $sans;
+  color: $primary-1;
+
+  border-radius: 2px;
+  // border: 1px solid $gray-4;
+  min-width: 4rem;
+  padding: .75rem 1rem .55rem !important;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    color: $primary-1;
+    background-color: $gray-9;
+  }
+  &.ss-icon {
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 1rem 1rem .6rem !important;
+    line-height: 1.6;
+    min-width: auto;
+    text-align: center;
+  }
+}
+.button--small,
+%button--small {
+  padding: .3rem 1rem .25rem !important;
+  // min-width: 2rem !important;
+}
+.button--allcaps,
+%button--allcaps {
+  // font-size:
+}
+.button--primary {
+  color: white;
+  background-color: $primary-1;
+  border: 1px solid $primary-1;
+  &:hover {
+    color: white;
+    background-color: $primary-2;
+    border-color: $primary-2;
+  }
+}
+.button--starter {
+
+}
+.button-set {
+  @extend %clearfix;
+  overflow: visible;
+  display: block;
+  margin: 1rem 0;
+}

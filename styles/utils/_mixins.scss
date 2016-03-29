@@ -1,0 +1,70 @@
+// Maybe break these out into individual files like: https://github.com/evernote/sass-build-structure/
+// Clearfix
+@mixin clearfix() {
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Grid
+@mixin width($colCount: 2, $colSpan: 1, $gutter: 4%) {
+	@if $gutter == 'auto' {
+		width: $colSpan * (100% / $colCount);
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	} @else {
+		width: $colSpan * ((100% - ($gutter * ($colCount - 1))) / $colCount);
+		margin-left: 0;
+		margin-right: $gutter;
+		float: left;
+
+		&:nth-of-type(#{$colCount}n + #{$colCount}) {
+			margin-right: 0;
+			// background-color: teal !important;
+		}
+
+		&:nth-of-type(#{$colCount}n + 1) {
+			clear: left; // Should this be right?
+		}
+	}
+}
+
+@mixin first($colCount: 2, $colSpan: 1, $gutter: 4%) {
+	margin-left: $gutter + ($colSpan * ((100% - $gutter) / $colCount));
+}
+
+@mixin only($colCount: 2, $colSpan: 1, $gutter: 4%) {
+	margin-left: 100% - ($colSpan * ((100% - $gutter) / $colCount));
+	margin-right: 0;
+}
+
+@mixin first-only($colCount: 2, $colSpan: 1, $gutter: 4%) {
+	margin-left: $gutter + ($colSpan * ((100% - $gutter) / $colCount));
+	margin-right: 100% - ($gutter + ($colSpan * ((100% - $gutter) / $colCount)));
+}
+
+@mixin grid-columns($colCount: 2, $colSpan: 1, $gutter: 4%) {
+	@include width($colCount, $colSpan, $gutter);
+	@content;
+
+	// &.first {
+	// 	@include first($colCount, $colSpan, $gutter);
+	// }
+
+	// &.only {
+	// 	@include only($colCount, $colSpan, $gutter);
+	// }
+
+	// &.first-only {
+	// 	@include first-only($colCount, $colSpan, $gutter);
+	// }
+}

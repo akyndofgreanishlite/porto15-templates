@@ -1,0 +1,23 @@
+.inkling-1 {
+  header {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    & > * {
+      flex: 0 1 auto;
+    }
+    &::after {
+      background:
+        linear-gradient( to left top, rgba($gray-9,.4), rgba($gray-9,.4)),
+        url(images/inkling-1/inkling-hero.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    h4 {
+      color: $gray-9;
+    }
+  }
+}

@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'Caponi Display';
+  src: url(fonts/CaponiDisplay-Regular-Web.woff);
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Caponi Display';
+  src: url(fonts/CaponiDisplay-RegularItalic-Web.woff);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Caponi Display';
+  src: url(fonts/CaponiDisplay-RegularNo2-Web.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Caponi Display';
+  src: url(fonts/CaponiDisplay-RegularNo2Italic-Web.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Caponi Display';
+  src: url(fonts/CaponiDisplay-Bold-Web.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Caponi Display';
+  src: url(fonts/CaponiDisplay-BoldItalic-Web.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-Light-Web.woff);
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-LightItalic-Web.woff);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-Regular-Web.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-RegularItalic-Web.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-Medium-Web.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-MediumItalic-Web.woff);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-Bold-Web.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Produkt';
+  src: url(fonts/Produkt-BoldItalic-Web.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Caponi Text';
+  src: url(fonts/CaponiText-RegularNo2-Web.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Caponi Text';
+  src: url(fonts/CaponiText-RegularNo2Italic-Web.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Caponi Text';
+  src: url(fonts/CaponiText-Bold-Web.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Caponi Text';
+  src: url(fonts/CaponiText-BoldItalic-Web.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+
+$loco-sans: 'proxima-nova','Proxima Nova', '-apple-system', system, Verdana, serif;
+$loco-serif-display: 'Produkt','Caponi Display', Georgia, serif;
+$loco-serif-text: 'Caponi Text', Georgia, serif;
+
+.loco-design {
+  body {
+    background-color: $gray-10;
+  }
+  h1,
+  h2,
+  h3,
+  q p {
+    font-family: $loco-serif-display;
+  }
+  h1 {
+    font-weight: 300;
+  }
+  h2 {
+    font-weight: 700;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  h4,
+  h5,
+  p.lead,
+  code p,
+  figcaption h5,
+  figcaption p {
+    font-family: $loco-sans;
+  }
+  h4 {
+    letter-spacing: .1rem;
+    & + time {
+      margin-top: 2rem;
+    }
+  }
+  p {
+    font-family: $loco-serif-text;
+  }
+  q p {
+    font-style: normal;
+    font-weight: 300;
+  }
+  code p {
+    // font-family: $loco-sans;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+  }
+  article {
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+  }
+  footer {
+    background-color: $gray-4;
+    margin-top: 4rem;
+    margin-bottom: -4rem;
+    padding: 3rem 0 4rem;
+    h2 {
+      margin-top: 1.5rem;
+    }
+
+    figure.profile {
+      @extend %clearfix;
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-bottom: 0;
+      & > * {
+        color: $gray-2;
+      }
+      h2 + h4 {
+        margin-top: -.25rem;
+      }
+    }
+    p {
+      color: $gray-3;
+      margin-bottom: 0;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    img,
+    figcaption {
+      @include grid-columns(2);
+    }
+    img {
+      border-radius: 50%;
+      margin-top: 0rem;
+      // max-height: 8.5rem;
+      height: 20vh;
+      width: 20vh;
+      // width: 4rem;
+      background-color: red;
+      border: none;
+      outline: none;
+    }
+    figcaption {
+      margin-right: 0;
+      clear: right !important;
+    }
+  }
+  &.fourohfour  {
+    padding-bottom: 0;
+    nav {
+      background-color: $gray-1;
+      a {
+        color: $gray-3;
+      }
+    }
+    article {
+      padding-bottom: 0;
+    }
+    aside {
+      // @extend %clearfix;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 30vh 5%;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      & > * {
+        flex: 0 1 auto;
+      }
+    }
+    h1 + h2 {
+      margin-top: -2rem;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+    p {
+      color: $gray-2;
+      text-align: center;
+    }
+  }
+}

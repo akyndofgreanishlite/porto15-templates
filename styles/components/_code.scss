@@ -1,0 +1,24 @@
+code {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: -1.5rem;
+  margin-top: 0;
+  p {
+    font-size: .9rem !important;
+    // margin-left: auto;
+    // margin-right: auto;
+    // display: inline;
+    // margin-left: auto;
+    // margin-right: auto;
+    // float: left;
+    width: auto;
+    color: $primary-1;
+    // background-color: $gray-10;
+
+    padding: .5rem 0;
+    border-radius: 4px;
+  }
+}
